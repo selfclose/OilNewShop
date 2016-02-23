@@ -21,6 +21,7 @@ var paths = {
     scss: './src/scss/**/*.scss',
     coffee: [
         './src/coffee/app.coffee',
+        './src/coffee/config.coffee',
         './src/coffee/routing.coffee',
         './src/coffee/controllers/**/*.coffee'
     ]

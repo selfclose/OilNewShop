@@ -1,4 +1,7 @@
-app.controller('LoginCtrl', ($scope, $timeout, $stateParams, ionicMaterialInk) ->
+app.controller 'LoginCtrl', ($scope, $timeout, $stateParams, ionicMaterialInk, appInfo) ->
+    $scope.title = appInfo.appTitle
+    $scope.logo = appInfo.appLogo
+
     $scope.$parent.clearFabs()
     $timeout (->
         $scope.$parent.hideHeader()
@@ -6,8 +9,21 @@ app.controller('LoginCtrl', ($scope, $timeout, $stateParams, ionicMaterialInk) -
     ), 0
     ionicMaterialInk.displayEffect()
     return
-)
-.controller('AppCtrl', ($scope, $ionicModal, $ionicPopover, $timeout) ->
+
+#    app.controller 'LoginCtrl', [
+#        'config'
+#        ($scope, $timeout, $stateParams, ionicMaterialInk) ->
+#            $scope.$parent.clearFabs()
+#            $timeout (->
+#                $scope.$parent.hideHeader()
+#                return
+#            ), 0
+#            ionicMaterialInk.displayEffect()
+#            return
+#    ]
+
+
+app.controller('AppCtrl', ($scope, $ionicModal, $ionicPopover, $timeout) ->
 # Form data for the login modal
     $scope.loginData = {}
     $scope.isExpanded = false

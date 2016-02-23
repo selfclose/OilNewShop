@@ -2,8 +2,8 @@ ion-view(view-title='Login', align-title='left')
     ion-content(style='background: url(img/login.jpg) center; background-size: cover;')
         .hero.no-header.flat
             .content
-                .app-icon
-                h1 Thronester
+                .app-icon(style="background: url({{logo}}) center; background-size: cover;")
+                h1 {{title}}
         .list
             ion-md-input(placeholder='Username', highlight-color='balanced', type='text')
             ion-md-input(placeholder='Password', highlight-color='energized', type='password')
